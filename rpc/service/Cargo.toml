@@ -1,0 +1,36 @@
+[package]
+name = "calico-rpc-service"
+description = "Calico RPC service"
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+calico-addresses.workspace = true
+calico-consensus-core.workspace = true
+calico-consensus-notify.workspace = true
+calico-consensusmanager.workspace = true
+calico-core.workspace = true
+calico-hashes.workspace = true
+calico-index-core.workspace = true
+calico-math.workspace = true
+calico-mining.workspace = true
+calico-notify.workspace = true
+calico-p2p-flows.workspace = true
+calico-p2p-lib.workspace = true
+calico-perf-monitor.workspace = true
+calico-rpc-core.workspace = true
+calico-txscript.workspace = true
+calico-utils.workspace = true
+calico-utils-tower.workspace = true
+calico-utxoindex.workspace = true
+
+async-trait.workspace = true
+log.workspace = true
+tokio.workspace = true
+triggered.workspace = true
+workflow-rpc.workspace = true

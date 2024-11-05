@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+wasm-pack build --weak-refs --target nodejs --out-name calico --out-dir nodejs/calico --features wasm32-sdk

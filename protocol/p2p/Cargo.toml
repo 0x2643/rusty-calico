@@ -1,0 +1,53 @@
+[package]
+name = "calico-p2p-lib"
+description = "Calico p2p library"
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+path = "./src/lib.rs"
+
+[[bin]]
+name = "calico_p2p_client"
+path = "./src/bin/client.rs"
+
+[[bin]]
+name = "calico_p2p_server"
+path = "./src/bin/server.rs"
+
+[dependencies]
+calico-core.workspace = true
+calico-consensus-core.workspace = true
+calico-mining-errors.workspace = true
+calico-hashes.workspace = true
+calico-math.workspace = true
+calico-utils.workspace = true
+calico-utils-tower.workspace = true
+
+borsh.workspace = true
+ctrlc.workspace = true
+futures = { workspace = true, features = ["alloc"] }
+h2.workspace = true
+itertools.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+prost.workspace = true
+rand.workspace = true
+seqlock.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = [ "rt-multi-thread", "macros", "signal" ] }
+tokio-stream = { workspace = true, features = ["net"] }
+tonic = { workspace = true, features = ["tls", "gzip"] }
+uuid.workspace = true
+
+[build-dependencies]
+tonic-build = { workspace = true, features = ["prost"] }
+
+[dev-dependencies]
+hex.workspace = true

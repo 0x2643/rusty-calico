@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <script type="module">
+            import * as calico from './calico-rpc/calico-rpc.js';
+            (async () => {
+                await calico.default('./calico-rpc/calico-rpc_bg.wasm');
+                console.log(calico.version());
+            })();
+        </script>
+    </head>
+    <body></body>
+</html>

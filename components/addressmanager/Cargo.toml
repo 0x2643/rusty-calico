@@ -1,0 +1,30 @@
+[package]
+name = "calico-addressmanager"
+description = "Calico address manager"
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+borsh.workspace = true
+igd-next.workspace = true
+itertools.workspace = true
+calico-consensus-core.workspace = true
+calico-core.workspace = true
+calico-database.workspace = true
+calico-utils.workspace = true
+local-ip-address.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+rand.workspace = true
+rocksdb.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+rv.workspace = true

@@ -1,0 +1,29 @@
+[package]
+name = "calico-utxoindex"
+description = "Calico UTXO index"
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+futures.workspace = true
+calico-consensus-core.workspace = true
+calico-consensusmanager.workspace = true
+calico-core.workspace = true
+calico-database.workspace = true
+calico-hashes.workspace = true
+calico-index-core.workspace = true
+calico-utils.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+rocksdb.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+calico-consensus.workspace = true
+rand = { workspace = true, features = ["small_rng"] }

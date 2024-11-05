@@ -1,0 +1,18 @@
+[package]
+name = "calico-wrpc-simple-client-example"
+description = "Calico wRPC simple client example"
+publish = false
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+futures.workspace = true
+calico-rpc-core.workspace = true
+calico-wrpc-client.workspace = true
+tokio.workspace = true
+

@@ -1,0 +1,13 @@
+[package]
+name = "calico-merkle"
+description = "Calico merkle tree library"
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+calico-hashes.workspace = true

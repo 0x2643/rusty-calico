@@ -1,0 +1,22 @@
+[package]
+name = "calico-wrpc-example-subscriber"
+description = "Calico wRPC subscription example"
+publish = false
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+futures.workspace = true
+calico-consensus-core.workspace = true
+calico-rpc-core.workspace = true
+calico-wrpc-client.workspace = true
+calico-notify.workspace = true
+tokio.workspace = true
+workflow-core.workspace = true
+workflow-log.workspace = true
+ctrlc.workspace = true

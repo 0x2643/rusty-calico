@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wasm-pack build --target nodejs --out-name calico-rpc --out-dir nodejs/calico-rpc --features wasm32-sdk

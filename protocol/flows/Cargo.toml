@@ -1,0 +1,38 @@
+[package]
+name = "calico-p2p-flows"
+description = "Calico p2p flows"
+rust-version.workspace = true
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+include.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+calico-core.workspace = true
+calico-consensus-core.workspace = true
+calico-consensus-notify.workspace = true
+calico-p2p-lib.workspace = true
+calico-utils.workspace = true
+calico-utils-tower.workspace = true
+calico-hashes.workspace = true
+calico-muhash.workspace = true
+calico-connectionmanager.workspace = true
+calico-addressmanager.workspace = true
+calico-consensusmanager.workspace = true
+calico-mining.workspace = true
+calico-notify.workspace = true
+
+async-trait.workspace = true
+futures = { workspace = true, features = ["alloc"] }
+indexmap.workspace = true
+itertools.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+rand.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "signal"] }
+tokio-stream = { workspace = true, features = ["net"] }
+uuid = { workspace = true, features = ["v4", "fast-rng"] }
+chrono.workspace = true

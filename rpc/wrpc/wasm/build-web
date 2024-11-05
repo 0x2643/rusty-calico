@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wasm-pack build --target web --out-name calico-rpc --out-dir web/calico-rpc --features wasm32-sdk

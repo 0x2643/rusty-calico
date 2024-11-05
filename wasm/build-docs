@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+./build-web $@
+
+if [ "$1" == "--keygen" ]; then
+    echo "building keygen"
+    typedoc --name "Calico WASM32 SDK - Key Generation" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico-keygen ./build/docs/calico-keygen.ts
+elif [ "$1" == "--rpc" ]; then
+    echo "building rpc"
+    typedoc --name "Calico WASM32 SDK - RPC" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico-rpc ./build/docs/calico-rpc.ts
+elif [ "$1" == "--core" ]; then
+    echo "building core"
+    typedoc --name "Calico WASM32 SDK - Core" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico-core ./build/docs/calico-core.ts
+elif [ "$1" == "--sdk" ]; then
+    echo "building full"
+    typedoc --name "Calico WASM32 SDK" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico ./build/docs/calico.ts
+else
+    echo "building keygen"
+    typedoc --name "Calico WASM32 SDK - Key Generation" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico-keygen ./build/docs/calico-keygen.ts
+    echo "building rpc"
+    typedoc --name "Calico WASM32 SDK - RPC" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico-rpc ./build/docs/calico-rpc.ts
+    echo "building core"
+    typedoc --name "Calico WASM32 SDK - Core" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico-core ./build/docs/calico-core.ts
+    echo "building full"
+    typedoc --name "Calico WASM32 SDK" --sourceLinkExternal --readme ./README.md --options ./build/docs/ --out ./docs/calico ./build/docs/calico.ts
+
+fi
